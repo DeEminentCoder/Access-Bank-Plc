@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
+        <script src="./bootstrap-5.2.2-dist/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="./AccessBankApp.css">
+        <title>Document</title>
+    </head>
+    <body>
+            <div id="parentBody" class="container-fluid">
+
+                <div id="topContent" class="row mx-1 mb-5 mt-4 pb-5">
+                    <div class="col-10" id="logo"><img src="./images/access-bank-plc.2048x507.png" alt=""></div>
+                    <div class="col-2" id="naijaLogo"><img src="./images/Flag-of-Nigeria.png" alt=""></div>
+                </div>
+                <center>
+                    <h1 class="mt-5">SIGN UP</h1>
+                    <div class="col px-5 mb-3 mt-5"><hr></div>
+                    <div class="row px-3 py-5" id="middleContent">
+                        <div class="col-12"><input id="firstNameInp" class="form-control ps-4" placeholder="Firstname..." type="text"></div>
+                        <div class="col-12 mt-2"><input id="lastNameInp" class="form-control ps-4" placeholder="Lastname..." type="text"></div>
+                        <div class="col-7 mt-2"><input id="emailInp" class="form-control ps-4" placeholder="Email..." type="email"></div>
+                        <div class="col-5 mt-2"><input id="passwordInp" class="form-control ps-4" placeholder="Password..." type="password"></div>
+                        <div class=" mt-4 col-12"><a href="#"><button class="btn btn-sm btn-light border" onclick="customerSignUp()"><h5 class="">Next <img src="./bootstrap-icons-1.10.3/arrow-right-circle-fill.svg" alt=""></a></h5></button></div>
+                    </div>
+                    <div id="signUpErrorBox"></div>
+                    <div class="row px-3 py-5" id="">
+                        <div><h6 class="display-6 fs-6 col">Already have an account? <a href="">Login</a></h6></div>
+                    </div>
+                </center>
+            </div>
+
+            <script>
+                let allCustomers = []
+                if (localStorage.localCustomers) {
+                    const oldData = JSON.parse(localStorage.getItem("localCustomers"))
+                    allCustomers = oldData
+                }
+                console.log(allCustomers)
+
+                let customerSignUp = () => {
+                    if (firstNameInp.value == "" || lastNameInp.value == "" || emailInp.value == "" || passwordInp.value == "") {
+                        signUpErrorBox.innerHTML = ("All Inputs Must Not Be Empty!")
+                    }else {
+                        let eachCustomer = {
+                            customerFirstnameAtSignup : firstNameInp.value,
+                            customerLastnameAtSignup : lastNameInp.value,
+                            customerEmailAtSignup : emailInp.value,
+                            customerPasswordAtSignup : passwordInp.value
+                        }
+                        allCustomers.push(eachCustomer)
+                        localStorage.setItem('localCustomers', JSON.stringify(allCustomers));
+                        window.location.href = "signupForm2.html"
+                    }
+                }
+            </script>
+    </body>
+</html>

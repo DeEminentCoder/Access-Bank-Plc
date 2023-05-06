@@ -1,0 +1,182 @@
+* {
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid gold; */
+}
+body {
+    background-image: url(./images/logobackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#logo img {
+    width: 130px;
+    /* height: 100px; */
+}
+#naijaLogo img {
+    width: 40px;
+}
+h1 {
+    color: #fe6709;
+    filter: drop-shadow(2px 1px 3px );
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+#middleContent {
+    margin-top: 10px;
+}
+#firstNameInp {
+    background-image: url(./bootstrap-icons-1.10.3/person.svg);
+    background-position: 5px 10px;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+}
+#lastNameInp {
+    background-image: url(./bootstrap-icons-1.10.3/person.svg);
+    background-position: 5px 10px;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+}
+#emailInp {
+    background-image: url(/bootstrap-icons-1.10.3/mailbox.svg);
+    background-position: 5px 10px;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+}
+#passwordInp {
+    background-image: url(./bootstrap-icons-1.10.3/key.svg);
+    background-position: 5px 10px;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+}
+button h5 {
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #fff;
+}
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+a:active {
+    color: rgb(212, 0, 0);
+}
+a:hover {
+    color: rgb(255, 255, 255);
+}
+h6 {
+    letter-spacing: 1px;
+    color: #fe6709;
+}
+h6 a {
+    text-decoration: none;
+    color: rgb(25, 155, 70);
+}
+h6 a:hover {
+    text-decoration: none;
+    color: rgb(79, 79, 79);
+}
+#signUpErrorBox {
+    color: rgb(252, 0, 0);
+}
+
+
+/* SIGNUP FORM2 SECOND PAGE */
+/* #middleContent2 {
+    margin-top: 10px;
+} */
+select  {
+    background-image: url(./bootstrap-icons-1.10.3/flag.svg);
+    background-position: 5px 10px;
+    background-repeat: no-repeat;
+}
+#phoneNoInp {
+    background-image: url(./bootstrap-icons-1.10.3/phone.svg);
+    background-position: 5px 10px;
+    background-repeat: no-repeat;
+}
+#addressInp {
+    background-image: url(./bootstrap-icons-1.10.3/house.svg);
+    background-position: 5px 10px;
+    background-repeat: no-repeat;
+}
+#gender {
+    font-weight: 500;
+    float: left;
+}
+#genderMale {
+    float: left;
+}
+#genderFemale {
+    float: left;
+    margin-left: 40px;
+}
+#genderRadioText {
+    float: left;
+    margin-top: -2px;
+    margin-left: 10px;
+}
+#dob {
+    float: left;
+}
+
+
+/* SIGNIN STYLING */
+#signin {
+    margin-top: 50px;
+}
+#forgotPassword a {
+    color: #fe6709;
+}
+#biometrics {
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+#footer {
+    margin-bottom: none;
+    margin-top: 85px;
+    font-size: 0.8em;
+    box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.15);
+    filter: opacity(50%);
+}
+
+
+/* DASHBOARD */
+#dashboardContainer {
+    /* height: 300px; */
+    /* width: 200px; */
+    background-color: #ff9900;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#logowhite {
+    width: 100px;
+    margin-top: -5px;
+}
+#greeting span{
+    font-weight: 400;
+    margin-top: 100px;
+    margin-right: 20px;
+}
+#myFav .fs-4 {
+    margin-right: 170px;
+}
+#dashboardBoxes {
+    background-color: #ffa724;
+    text-align: center;
+    color: #fff;
+    /* margin: 1px; */
+    border: 1px solid #ff9900;
+    font-size: 0.8em;
+    padding: 5px;
+}
+#featured {
+    /* height: 300px; */
+    /* width: 200px; */
+    background-color: #ffffff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

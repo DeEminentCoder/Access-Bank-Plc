@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
+        <script src="./bootstrap-5.2.2-dist/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="./AccessBankApp.css">
+        <title>Document</title>
+    </head>
+    <body>
+            <div id="parentBody">
+
+                <div id="topContent" class="row p-4">
+                    <div class="col-10" id="logo"><img src="./images/access-bank-plc.2048x507.png" alt=""></div>
+                    <div class="col-2" id="naijaLogo"><img src="./images/Flag-of-Nigeria.png" alt=""></div>
+                </div>
+                <center>
+                    <h1 class="mt-2 fs-6">Complete SIgnup</h6>
+
+                    <div class="row px-3 py-" id="middleContent2">
+                        <div class="col px-5 pb- mt-1"><hr></div>
+                        <div class="col-12 mb-1"><span class="" id="gender">Country</span></div>
+                        <div class="col-12">
+                            <select class=" form-control ps-4" id="countryInp">
+                                <option value="Nationality" selected>Please Select Nationality</option>
+                                <option value="saab">USA</option>
+                                <option value="opel">Nigeria</option>
+                                <option value="audi">Russia</option>
+                                <option value="audi">Ghana</option>
+                                <option value="audi">South Africa</option>
+                                <option value="audi">Australia</option>
+                              </select>
+                        </div>
+                        <div class="col-12 mt-2"><span class="" id="gender">Phone Number</span></div>
+                        <div class="col-12 mt-2"><input id="phoneNoInp" class="form-control ps-4" placeholder="Enter your Phone No..." type="text"></div>
+                        <div class="col-12 mt-2"><span class="" id="gender">Identificatio Nunmber</span></div>
+                        <div class="col-12 mt-2"><input id="ninInp" class="form-control ps-4" placeholder="Provide either of your NIN / BVN" type="text"></div>
+                        <div class="col-12 mt-2"><span class="" id="gender">Gender</span></div>
+                        <div class="col-12 mt-2">
+                            <input id="genderMale" name="gender" value="Mr" class="mt-1" type="radio" checked><span id="genderRadioText">Male</span>
+                            <input id="genderFemale" name="gender" value="Mrs" class="mt-1" type="radio"> <span id="genderRadioText">Female</span>
+                        </div>
+                        <div class="col-12 mt-2"><span class="" id="gender">Address</span></div>
+                        <div class="col-12 mt-2"><input id="addressInp" class="form-control ps-4" placeholder="Enter your Address..." type="text"></div>
+                        <div class="col-5 mt-2"><span id="dob">Date Of Birth</span></div>
+                        <div class="col-12 mt-2"><input id="dateInp" class="form-control" type="date"></div>
+                        <div class=" mt-4 col-12"><a href="#"><button class="btn btn-sm btn-light border" onclick="CompleteSignup()"><h5 class="">Signup <img src="./bootstrap-icons-1.10.3/hand-thumbs-up.svg" alt=""></a></h5></button></div>
+                    </div>
+                    <div id="signUpErrorBox"></div>
+                    <div class="row px-3 py-5" id="">
+                        <div><h6 class="display-6 fs-6 col">Already have an account? <a href="">Login</a></h6></div>
+                    </div>
+                </center>
+            </div>
+
+            <script>
+                let allCustomers2 = []
+                if (localStorage.localCustomers) {
+                    const oldData = JSON.parse(localStorage.getItem("localCustomers"))
+                    allCustomers2 = oldData
+                }
+                // console.log(allCustomers)
+                // let allCustomers2 = localStorage.getItem(allCustomers) + allCustomers2
+
+                let CompleteSignup = () => {
+                    if (countryInp.value == "Nationality" || phoneNoInp.value == "" || ninInp.value == "" || addressInp.value == "") {
+                        signUpErrorBox.innerHTML = ("All inputs must be properly filled!")
+                    }else {
+                        let eachCustomer2 = {
+                            customercountryAtCompleteSignup : countryInp.value,
+                            customerphoneNoAtCompleteSignup : phoneNoInp.value,
+                            customerninInpAtCompleteSignup : ninInp.value,
+                            customeraddressAtCompleteSignup : addressInp.value,
+                            customerDOBAtCompleteSignup : dob.value
+                        }
+                        allCustomers2.push(eachCustomer2)
+                        localStorage.setItem('localCustomers', JSON.stringify(allCustomers2));
+                        window.location.href = "signInPage.html"
+                    }
+                }
+                console.log(allCustomers2)
+            </script>
+    </body>
+</html>
