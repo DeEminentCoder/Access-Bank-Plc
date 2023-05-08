@@ -11,26 +11,32 @@
     </head>
     <body>
             <div id="parentBody">
-
-                <div id="topContent" class="row p-4">
-                    <div class="col-10" id="logo"><img src="./images/access-bank-plc.2048x507.png" alt=""></div>
-                    <div class="col-2" id="naijaLogo"><img src="./images/Flag-of-Nigeria.png" alt=""></div>
-                </div>
+                <center class="container-fluid">
+                     <div id="topContent" class="row pt-3 px-2 pb-5">
+                        <div class="col-6 ms-0" id="logo"><img src="./images/access-bank-plc.2048x507.png" alt=""></div>
+                        <div class="col-6" id="naijaLogo">
+                            <img src="./images/Flag-of-Nigeria.png" alt="" width="40px"><img src="./images/notification.png" alt="" width="25px">
+                        </div>
+                    </div>
+                </center>
+               
              
-                <center>
+                <center class="container-fluid">
                     <div class="row px-3 pt-5" id="signin">
-                        <div id="displayWarnings"><h6 class="display-6 fs-6 col text-warning">Enter your correct details, please!</h6></div>
-                        <div class="col-12 py-3"><input id="emailInp" class="form-control ps-4" placeholder="Email" type="email"></div>
-                        <div class="col-12"><input id="passwordInp" class="form-control ps-4" placeholder="Password" type="text"></div>
-                        <div><span id="forgotPassword"><a href=""> Forgot password?</a></span></div>
-                        <div class="mt-3 col-12"><button class="btn btn-sm btn-success" onclick="CustomersSignIn()"><h5 class="">Login</h5></button></div>
+                        <div class="mb-4" id="Welcome"><span class=" col text-secondary">Welcome!</span></div>
+                        <!-- <div class="col-12 py-3"><input id="emailInp" class="form-control ps-4" placeholder="Email" type="email"></div> -->
+                        <div class="col-12"><input type="password" id="passwordInp" class="form-control ps-5 py-3 border" value="Password"></div>
+                        <div><span" class="fs-6"><a href="" id="orangeTexts"> Forgot password?</a></span></div>
+                        <div class="mt-3 col-12"><button class="btn btn-success border px-5 mb-4" onclick="CustomersSignIn()"><span class="">Sign in</span></button></div>
                     </div>
                     
-                    <div id="biometrics" class="p-4 mx-4 mt-5 bg-secondary"><span class="text-light">SIGN IN WITH BIOMETRICS</span></div>
-                </center>
+                    <div id="biometrics" class="p-4 mx-4 mt-5 mb-5 bg-secondary"><span class="text-light">SIGN IN WITH BIOMETRICS</span></div>
+                    <div class="mt-5"><span id="orangeTexts" class="fs-6">Not a user?</span></div>
+                    <div class="mt-"><button class="btn btn-sm btn- border px-"><span class="text-dark">Sign up</span></button></div>
+                    </center>
 
-                <center>
-                    <div id="footer" class="row pt-3">
+                <center class="container-fluid" id="footer">
+                    <div id="" class="row pt-3 pb-3">
                         <div class="col"><img src="./bootstrap-icons-1.10.3/lock.svg" alt="" width="30px"><br><strong>Login</strong></div>
                         <div class="col-4"><img src="./bootstrap-icons-1.10.3/card-text.svg" alt="" width="30px"><br><span>Quick Services</span></div>
                         <div class="col"><img src="./bootstrap-icons-1.10.3/phone-vibrate.svg" alt="" width="30px"><span>Support</span></div>
